@@ -1,0 +1,10 @@
+{
+    "data": [
+        {
+            "first_name": "brad",
+            "last_name": "gibson",
+            "gender": "male",
+            "email": "brab.gibson@example.com"
+        }
+    ]
+}
