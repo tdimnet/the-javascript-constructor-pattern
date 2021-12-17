@@ -2,10 +2,11 @@ import {
     useQuery,
     useQueryClient
 } from 'react-query'
-import React from 'react'
+
+import Header from '../../components/Layout/Header'
 
 const Page = () => {
-    const { isLoading, error, data } = useQuery('users', () => fetch('https://randomuser.me/api/').then(res => res.json()))
+    const { isLoading, error, data } = useQuery('users', () => fetch('https://randomuser.me/api/?results=10').then(res => res.json()))
 
     if (isLoading) return <div>Loading...</div>
 
@@ -17,7 +18,9 @@ const Page = () => {
 
     return (
         <div>
-            <h1>Hello, world</h1>
+            <Header>
+                <h1>Students</h1>
+            </Header>
         </div>
     )
 } 
