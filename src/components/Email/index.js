@@ -3,10 +3,15 @@ import styled from '@emotion/styled'
 
 const Email = styled.a``
 
-const Component = ({ email }) => <Email>{email}</Email>
+const Component = ({ className, email }) => <Email className={className}>{email}</Email>
 
 Component.propTypes = {
+    className: PropTypes.string,
     email: PropTypes.string.isRequired
+}
+
+Component.defaultProps = {
+    className: ''
 }
 
 export default Component

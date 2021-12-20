@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import Image from '../Image'
 import Name from '../Name'
 import Email from '../Email'
-import JoinedData from '../Date'
+import JoinedDate from '../Date'
 
 const Wrapper = styled.div`
     border-bottom: 1px solid #eaeaea;
@@ -12,20 +12,37 @@ const Wrapper = styled.div`
     padding-bottom: 24px;
 `
 
+const UserImage = styled(Image)`
+    grid-area: UserImage;
+`
+
+const UserName = styled(Name)`
+    grid-area: UserName;
+`
+
+const UserEmail = styled(Email)`
+    grid-area: UserEmail;
+`
+
+const UserJoinedDate = styled(JoinedDate)`
+    grid-area: UserJoinedDate;
+`
+
 const Component = ({ user }) => (
     <Wrapper>
-        <Image
+        <UserImage
             title={user.name.title}
             firstName={user.name.first}
             lastName={user.name.last}
             picture={user.picture.medium}
+            rounded={false}
         />
-        <Name
+        <UserName
             firstName={user.name.first}
             lastName={user.name.last}
         />
         <Email email={user.email} />
-        <JoinedData date={user.registered.date} />
+        <UserJoinedDate date={user.registered.date} />
     </Wrapper>
 )
 

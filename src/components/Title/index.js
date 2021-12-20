@@ -10,10 +10,15 @@ const Title = styled.h1`
     text-transform: uppercase;
 `
 
-const Component = ({ text }) => <Title>{text}</Title>
+const Component = ({ className, text }) => <Title className={className}>{text}</Title>
 
 Component.propTypes = {
+    className: PropTypes.string,
     text: PropTypes.string.isRequired
+}
+
+Component.defaultProps = {
+    className: ''
 }
 
 export default Component

@@ -1,7 +1,9 @@
+import { useEffect } from 'react'
 import {
     useQuery,
     useQueryClient
 } from 'react-query'
+import styled from '@emotion/styled'
 
 import Body from '../../components/Layout/Body'
 import Main from '../../components/Layout/Main'
@@ -9,12 +11,19 @@ import Header from '../../components/Layout/Header'
 import Title from '../../components/Title'
 import UserCard from '../../components/UserCard'
 
+const PageTitle = styled(Title)`
+    margin-bottom: 24px;
+`
+
 const Page = () => {
     const { isLoading, error, data } = useQuery(
         'users',
         () => fetch('https://randomuser.me/api/?results=10')
             .then(res => res.json())
-            .then(({ results }) => results)
+            .then(({ results }) => results),
+        {
+            refetchOnWindowFocus: false
+        }
         )
 
     if (isLoading) return <div>Loading...</div>
@@ -29,7 +38,7 @@ const Page = () => {
         <Body>
             <Main>
                 <Header>
-                    <Title text='Students' />
+                    <PageTitle text='Students' />
                 </Header>
                 {
                     data.map(user => <UserCard key={user.cell} user={user} />)
