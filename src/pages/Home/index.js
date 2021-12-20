@@ -32,7 +32,7 @@ const Page = () => {
                     <Title text='Students' />
                 </Header>
                 {
-                    results.map(user => <UserCard key={user.id.value} />)
+                    data.map(user => <UserCard key={user.cell} user={user} />)
                 }
             </Main>
         </Body>
