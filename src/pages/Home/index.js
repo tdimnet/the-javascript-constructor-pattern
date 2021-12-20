@@ -3,7 +3,10 @@ import {
     useQueryClient
 } from 'react-query'
 
+import Body from '../../components/Layout/Body'
+import Main from '../../components/Layout/Main'
 import Header from '../../components/Layout/Header'
+import Title from '../../components/Title'
 
 const Page = () => {
     const { isLoading, error, data } = useQuery('users', () => fetch('https://randomuser.me/api/?results=10').then(res => res.json()))
@@ -17,11 +20,13 @@ const Page = () => {
     console.log('======')
 
     return (
-        <div>
-            <Header>
-                <h1>Students</h1>
-            </Header>
-        </div>
+        <Body>
+            <Main>
+                <Header>
+                    <Title text='Students' />
+                </Header>
+            </Main>
+        </Body>
     )
 } 
 

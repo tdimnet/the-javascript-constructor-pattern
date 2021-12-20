@@ -2,19 +2,18 @@ import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
 
-const Main = styled.main`
-    width: 80%;
-    background-color: #fff;
-    padding: 56px;
-    border-radius: 4px;
-    margin-left: auto;
-    margin-right: auto;
+const Body = styled.div`
+    background-color: #e1f1f6;
+    color: #222;
+    font-family: Helvetica, sans-serif;
+    padding-top: 56px;
+    padding-bottom: 56px;
 `
 
 const Component = ({ children }) => (
-    <Main>
+    <Body>
         { children }
-    </Main>
+    </Body>
 )
 
 Component.propTypes = {
