@@ -5,6 +5,8 @@ import {
 } from 'react-query'
 import styled from '@emotion/styled'
 
+import get from '../../services/Api'
+
 import Body from '../../components/Layout/Body'
 import Main from '../../components/Layout/Main'
 import Header from '../../components/Layout/Header'
@@ -18,9 +20,7 @@ const PageTitle = styled(Title)`
 const Page = () => {
     const { isLoading, error, data } = useQuery(
         'users',
-        () => fetch('https://randomuser.me/api/?results=10')
-            .then(res => res.json())
-            .then(({ results }) => results),
+        () => get(),
         {
             refetchOnWindowFocus: false
         }
