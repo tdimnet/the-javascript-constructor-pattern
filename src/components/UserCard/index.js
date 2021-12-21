@@ -10,22 +10,29 @@ const Wrapper = styled.div`
     border-bottom: 1px solid #eaeaea;
     margin-bottom: 24px;
     padding-bottom: 24px;
+    display: grid;
+    grid-template-areas: "image name date"
+                         "image email date";
+    grid-template-columns: min-content 1fr max-content;
+    grid-template-rows: min-content min-content;
+    grid-column-gap: 8px;
 `
 
 const UserImage = styled(Image)`
-    grid-area: UserImage;
+    grid-area: image;
 `
 
 const UserName = styled(Name)`
-    grid-area: UserName;
+    grid-area: name;
 `
 
 const UserEmail = styled(Email)`
-    grid-area: UserEmail;
+    grid-area: email;
 `
 
 const UserJoinedDate = styled(JoinedDate)`
-    grid-area: UserJoinedDate;
+    grid-area: date;
+    align-self: center;
 `
 
 const Component = ({ user }) => (
@@ -34,15 +41,15 @@ const Component = ({ user }) => (
             title={user.name.title}
             firstName={user.name.first}
             lastName={user.name.last}
-            picture={user.picture.medium}
+            picture={user.picture.thumbnail}
             rounded={false}
         />
         <UserName
             firstName={user.name.first}
             lastName={user.name.last}
         />
-        <Email email={user.email} />
         <UserJoinedDate date={user.registered.date} />
+        <UserEmail email={user.email} />
     </Wrapper>
 )
 
