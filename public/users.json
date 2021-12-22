@@ -3,82 +3,72 @@
         {
             "first_name": "brad",
             "last_name": "gibson",
-            "gender": "male",
             "email": "brab.gibson@example.com",
             "picture": "https://randomuser.me/api/portraits/thumb/men/59.jpg",
-            "registered_date": ""
+            "registered_date": "12/12/2020"
         },
         {
             "first_name": "anton",
             "last_name": "tervo",
-            "gender": "male",
             "email": "anton.tervo@example.com",
             "picture": "https://randomuser.me/api/portraits/thumb/men/31.jpg",
-            "registered_date": ""
+            "registered_date": "12/01/2022"
         },
         {
             "first_name": "bruce",
             "last_name": "franklin",
-            "gender": "male",
             "email": "bruce.franklin@example.com",
             "picture": "https://randomuser.me/api/portraits/thumb/men/3.jpg",
-            "registered_date": ""
+            "registered_date": "01/02/1999"
         },
         {
             "first_name": "sophie",
             "last_name": "andersen",
-            "gender": "female",
             "email": "sophie.andersen@example.com",
             "picture": "https://randomuser.me/api/portraits/thumb/women/52.jpg",
-            "registered_date": ""
+            "registered_date": "02/03/2012"
         },
         {
             "first_name": "otto",
             "last_name": "tanner",
-            "gender": "male",
             "email": "otto.tanner@example.com",
             "picture": "https://randomuser.me/api/portraits/thumb/men/4.jpg",
-            "registered_date": ""
+            "registered_date": "04/02/2017"
         },
         {
             "first_name": "gladys",
             "last_name": "hill",
-            "gender": "male",
             "email": "gladys.hill@example.com",
             "picture": "https://randomuser.me/api/portraits/thumb/women/44.jpg",
-            "registered_date": ""
+            "registered_date": "12/08/2000"
         },
         {
             "first_name": "grace",
             "last_name": "bradley",
-            "gender": "male",
             "email": "grace.bradley@example.com",
             "picture": "https://randomuser.me/api/portraits/thumb/men/51.jpg",
-            "registered_date": ""
+            "registered_date": "15/11/2018"
         },
         {
             "first_name": "arnold",
             "last_name": "madison",
-            "gender": "male",
             "email": "arnold.madison@example.com",
             "picture": "https://randomuser.me/api/portraits/thumb/men/31.jpg",
-            "registered_date": ""
+            "registered_date": "18/05/2022"
         },
         {
             "first_name": "marita",
             "last_name": "fure",
-            "gender": "female",
             "email": "marita.fure@example.com",
             "picture": "https://randomuser.me/api/portraits/thumb/women/87.jpg",
-            "registered_date": ""
+            "registered_date": "14/05/2012"
         },
         {
             "first_name": "eric",
             "last_name": "boyd",
-            "gender": "male",
             "email": "eric.boyd@example.com",
             "picture": "https://randomuser.me/api/portraits/thumb/men/59.jpg",
-            "registered_date": ""
+            "registered_date": "14/08/2000"
         }
     ]
 }

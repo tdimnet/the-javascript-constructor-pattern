@@ -11,7 +11,7 @@ async function getApiData() {
 }
 
 async function get() {
-    return await getApiData()
+    return await getMockData()
 }
 
 export default get
