@@ -11,7 +11,7 @@ const Text = styled.p`
 
 const Component = ({ className, date }) => (
     <Text className={className}>
-        Joined {moment(date).format('MM/DD/YY')}
+        Joined {date}
     </Text>
 )
 

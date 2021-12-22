@@ -38,15 +38,13 @@ const UserJoinedDate = styled(JoinedDate)`
 const Component = ({ user }) => (
     <Wrapper>
         <UserImage
-            firstName={user.first_name}
-            lastName={user.last_name}
+            fullName={user.fullName}
             picture={user.picture}
         />
         <UserName
-            firstName={user.first_name}
-            lastName={user.last_name}
+            fullName={user.fullName}
         />
-        <UserJoinedDate date={user.registered_date} />
+        <UserJoinedDate date={user.registeredDate} />
         <UserEmail email={user.email} />
     </Wrapper>
 )

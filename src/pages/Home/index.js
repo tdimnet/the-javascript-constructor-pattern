@@ -6,6 +6,7 @@ import {
 import styled from '@emotion/styled'
 
 import get from '../../services/Api'
+import User from '../../models/User'
 
 import Body from '../../components/Layout/Body'
 import Header from '../../components/Layout/Header'
@@ -37,7 +38,9 @@ const Page = () => {
                     <PageTitle text='Students' />
                 </Header>
                 {
-                    data.map(user => <UserCard key={user.id} user={user} />)
+                    data
+                        .map(user => new User(user))
+                        .map(user => <UserCard key={user.id} user={user} />)
                 }
             </Main>
         </Body>

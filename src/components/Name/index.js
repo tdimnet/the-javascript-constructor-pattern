@@ -8,16 +8,15 @@ const FullName = styled.p`
     margin-top: 0;
 `
 
-const Component = ({ className, firstName, lastName }) => (
+const Component = ({ className, fullName }) => (
     <FullName className={className}>
-        {firstName} {lastName}
+        {fullName}
     </FullName>
 )
 
 Component.propTypes = {
     className: PropTypes.string,
-    firstName: PropTypes.string.isRequired,
-    lastName: PropTypes.string.isRequired
+    fullName: PropTypes.string.isRequired
 }
 
 Component.defaultProps = {

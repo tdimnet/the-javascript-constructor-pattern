@@ -7,12 +7,11 @@ const Image = styled.img`
 
 const Component = ({
     className,
-    firstName,
-    lastName,
+    fullName,
     picture,
 }) => (
     <Image
-        alt={`${firstName} ${lastName}`}
+        alt={fullName}
         className={className}
         src={picture}
     />
@@ -20,8 +19,7 @@ const Component = ({
 
 Component.propTypes = {
     className: PropTypes.string,
-    firstName: PropTypes.string.isRequired,
-    lastName: PropTypes.string.isRequired,
+    fullName: PropTypes.string,
     picture: PropTypes.string.isRequired,
 }
 
