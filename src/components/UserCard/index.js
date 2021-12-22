@@ -42,7 +42,6 @@ const Component = ({ user }) => (
             firstName={user.name.first}
             lastName={user.name.last}
             picture={user.picture.thumbnail}
-            rounded={false}
         />
         <UserName
             firstName={user.name.first}
