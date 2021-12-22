@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
-import styled from '@emotion/styled'
 import moment from 'moment'
+import styled from '@emotion/styled'
 
 const Text = styled.p`
-    margin-top: 0;
-    margin-bottom: 0;
     color: #999;
     font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 0;
 `
 
 const Component = ({ className, date }) => (

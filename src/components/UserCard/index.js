@@ -1,21 +1,21 @@
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
-import Image from '../Image'
-import Name from '../Name'
 import Email from '../Email'
+import Image from '../Image'
 import JoinedDate from '../Date'
+import Name from '../Name'
 
 const Wrapper = styled.div`
     border-bottom: 1px solid #eaeaea;
-    margin-bottom: 24px;
-    padding-bottom: 24px;
     display: grid;
-    grid-template-areas: "image name date"
+    grid-column-gap: 8px;
+    grid-template-areas: "image name date" 
                          "image email date";
     grid-template-columns: min-content 1fr max-content;
     grid-template-rows: min-content min-content;
-    grid-column-gap: 8px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
 `
 
 const UserImage = styled(Image)`
@@ -31,8 +31,8 @@ const UserEmail = styled(Email)`
 `
 
 const UserJoinedDate = styled(JoinedDate)`
-    grid-area: date;
     align-self: center;
+    grid-area: date;
 `
 
 const Component = ({ user }) => (

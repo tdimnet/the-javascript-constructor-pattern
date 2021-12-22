@@ -6,14 +6,14 @@ const Image = styled.img`
 `
 
 const Component = ({
+    className,
     firstName,
     lastName,
     picture,
-    className,
 }) => (
     <Image
-        className={className}
         alt={`${firstName} ${lastName}`}
+        className={className}
         src={picture}
     />
 )

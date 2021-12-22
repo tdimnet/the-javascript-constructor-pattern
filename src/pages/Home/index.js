@@ -8,8 +8,8 @@ import styled from '@emotion/styled'
 import get from '../../services/Api'
 
 import Body from '../../components/Layout/Body'
-import Main from '../../components/Layout/Main'
 import Header from '../../components/Layout/Header'
+import Main from '../../components/Layout/Main'
 import Title from '../../components/Title'
 import UserCard from '../../components/UserCard'
 
@@ -37,7 +37,7 @@ const Page = () => {
                     <PageTitle text='Students' />
                 </Header>
                 {
-                    data.map(user => <UserCard key={user.cell} user={user} />)
+                    data.map(user => <UserCard key={user.id} user={user} />)
                 }
             </Main>
         </Body>
