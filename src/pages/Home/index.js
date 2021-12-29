@@ -33,10 +33,6 @@ const Page = () => {
 
     if (error) return <div>An error occurs...</div>
 
-    console.log('=====')
-    console.log(data)
-    console.log('=====')
-
     return (
         <Body>
             <Main>
