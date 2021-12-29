@@ -6,7 +6,9 @@ import {
 import styled from '@emotion/styled'
 
 import get from '../../services/Api'
-import User from '../../models/User'
+
+import MockedUser from '../../models/MockedUser'
+import ApiUser from '../../models/ApiUser'
 
 import Body from '../../components/Layout/Body'
 import Header from '../../components/Layout/Header'
@@ -31,6 +33,10 @@ const Page = () => {
 
     if (error) return <div>An error occurs...</div>
 
+    console.log('=====')
+    console.log(data)
+    console.log('=====')
+
     return (
         <Body>
             <Main>
@@ -39,7 +45,7 @@ const Page = () => {
                 </Header>
                 {
                     data
-                        .map(user => new User(user))
+                        .map(user => new MockedUser(user))
                         .map(user => <UserCard key={user.id} user={user} />)
                 }
             </Main>
